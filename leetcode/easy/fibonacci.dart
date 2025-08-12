@@ -31,6 +31,19 @@ void expect<T>(T a, T b) {
 //   }
 // }
 
+/// Recursive solution with memoization
+// Map<int, int> memo = {};
+// int fibonacci(int n) {
+//   if (n <= 1) {
+//     return n;
+//   }
+//   if (memo.containsKey(n)) {
+//     return memo[n]!;
+//   }
+//   memo[n] = fibonacci(n - 1) + fibonacci(n - 2);
+//   return memo[n]!;
+// }
+
 /// Iterative solution
 int fibonacci(int n) {
   if (n <= 1) {
