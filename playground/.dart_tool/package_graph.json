@@ -1,0 +1,21 @@
+{
+  "roots": [
+    "my_dart_app"
+  ],
+  "packages": [
+    {
+      "name": "my_dart_app",
+      "version": "1.0.0",
+      "dependencies": [
+        "rxdart"
+      ],
+      "devDependencies": []
+    },
+    {
+      "name": "rxdart",
+      "version": "0.28.0",
+      "dependencies": []
+    }
+  ],
+  "configVersion": 1
+}
