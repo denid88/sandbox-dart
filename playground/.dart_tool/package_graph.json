@@ -7,13 +7,26 @@
       "name": "my_dart_app",
       "version": "1.0.0",
       "dependencies": [
+        "bloc",
         "rxdart"
       ],
       "devDependencies": []
     },
     {
+      "name": "bloc",
+      "version": "8.1.4",
+      "dependencies": [
+        "meta"
+      ]
+    },
+    {
       "name": "rxdart",
       "version": "0.28.0",
+      "dependencies": []
+    },
+    {
+      "name": "meta",
+      "version": "1.16.0",
       "dependencies": []
     }
   ],

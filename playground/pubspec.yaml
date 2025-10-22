@@ -7,3 +7,4 @@ environment:
 
 dependencies:
   rxdart: ^0.28.0
+  bloc: ^8.1.0
