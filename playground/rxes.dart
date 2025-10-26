@@ -16,7 +16,7 @@ void main() {
   behaviorSubject.add(11); // print: BehaviorSubject: 11
 
   // 3. ReplaySubject — новий підписник отримує всю історію (можна обмежити розмір буфера)
-  final replaySubject = ReplaySubject<int>(maxSize: 2);
+  final replaySubject = ReplaySubject<int>(maxSize: 3);
   replaySubject.add(100);
   replaySubject.add(101);
   replaySubject.add(102);
@@ -24,12 +24,17 @@ void main() {
 
   // 5. Звичайний StreamController (single-subscription)
   final streamController = StreamController<int>();
+  streamController.add(287);
+  streamController.add(288);
+  streamController.add(299);
   streamController.stream.listen((v) => print('StreamController: $v'));
   streamController.add(300); // print: StreamController: 300
   streamController.close();
 
   // 6. Broadcast StreamController (дозволяє кілька підписників)
   final broadcastController = StreamController<int>.broadcast();
+  broadcastController.add(398);
+  broadcastController.add(399);
   broadcastController.stream.listen((v) => print('Broadcast 1: $v'));
   broadcastController.stream.listen((v) => print('Broadcast 2: $v'));
   broadcastController.add(400); // print: Broadcast 1: 400, Broadcast 2: 400

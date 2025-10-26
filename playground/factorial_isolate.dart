@@ -4,7 +4,7 @@ void main() async {
   final receivePort = ReceivePort();
 
   // Створюємо ізолят
-  await Isolate.spawn(heavyTaskEntryPoint, receivePort.sendPort);
+  final isolate = await Isolate.spawn(heavyTaskEntryPoint, receivePort.sendPort);
 
   // Отримуємо SendPort із ізолята
   final sendPort = await receivePort.first as SendPort;
@@ -22,6 +22,10 @@ void main() async {
   final result = await responsePort.first;
 
   print("Результат із ізолята: $result");
+  // Закриваємо порти та ізолят
+  responsePort.close();
+  receivePort.close();
+  isolate.kill(priority: Isolate.immediate);
 }
 
 /// Точка входу ізолята — виконує важку обчислювальну операцію
