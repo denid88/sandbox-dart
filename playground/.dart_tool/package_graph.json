@@ -8,13 +8,28 @@
       "version": "1.0.0",
       "dependencies": [
         "bloc",
-        "rxdart"
+        "bloc_concurrency",
+        "rxdart",
+        "stream_transform"
       ],
       "devDependencies": []
     },
     {
+      "name": "stream_transform",
+      "version": "2.1.1",
+      "dependencies": []
+    },
+    {
+      "name": "bloc_concurrency",
+      "version": "0.3.0",
+      "dependencies": [
+        "bloc",
+        "stream_transform"
+      ]
+    },
+    {
       "name": "bloc",
-      "version": "8.1.4",
+      "version": "9.0.0",
       "dependencies": [
         "meta"
       ]

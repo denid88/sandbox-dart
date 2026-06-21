@@ -28,7 +28,7 @@ void main() {
   streamController.add(288);
   streamController.add(299);
   streamController.stream.listen((v) => print('StreamController: $v'));
-  streamController.add(300); // print: StreamController: 300
+  streamController.add(300); // print: StreamController: 287, 288, 299, 300
   streamController.close();
 
   // 6. Broadcast StreamController (дозволяє кілька підписників)
