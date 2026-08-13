@@ -3,7 +3,7 @@ void main() {
   cafe.makeSetMeal();
 }
 
-enum FoodType {ukrainian, american, japanese}
+enum FoodType { ukrainian, american, japanese }
 
 abstract class SetMeal {}
 

@@ -16,7 +16,7 @@ void main() {
   });
 }
 
-enum MealType {pizza, soup, pancakes}
+enum MealType { pizza, soup, pancakes }
 
 abstract class Meal {
   @override
